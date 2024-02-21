@@ -167,6 +167,7 @@ input:checked + .slider:before {
   position: absolute;
   top: 35%;
   right: 3%;
+  cursor: pointer;
 }
 
 .search-container button svg {
@@ -182,6 +183,10 @@ input:checked + .slider:before {
 .word-display h1 {
   font-size: 56px;
   font-weight: 700;
+}
+
+.word-display button {
+  cursor: pointer;
 }
 
 .word-display button svg {

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/styles.css">
-  <script defer src="./app.js"></script>
+  <script defer src="./app.js" type="module"></script>
   <title>Dictionary</title>
 </head>
 <body>
@@ -30,7 +30,7 @@
         </div>
       </div>
       <div class="search-container">
-        <form action="">
+        <form action="" id="search">
           <input type="text" id="search-word">
           <button type="submit">
             <svg width="15.5" height="15.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M368 208A160 160 0 1 0 48 208a160 160 0 1 0 320 0zM337.1 371.1C301.7 399.2 256.8 416 208 416C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208c0 48.8-16.8 93.7-44.9 129.1l124 124 17 17L478.1 512l-17-17-124-124z"/></svg>
@@ -40,40 +40,52 @@
     </header>
     <main>
       <div class="word-display">
-        <h1>keyboard</h1>
+        <h1></h1>
         <button><svg width="75" height="75" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM384 256L176 384V128L384 256z"/></svg></button>
       </div>
       <div class="phoenetic">
-        <span>/'ki:bɔ:d/</span>
+        <span></span>
       </div>
       <div class="definition-container">
-        <div class="adj-noun-verb">
+        <div class="noun adj-noun-verb">
           <h2>noun</h2>
         </div>
         <h2 class="meaning">Meaning</h2>
         <ul>
-          <li>
-            <p>(etc.) A set of keys used to operate a typewriter, computer etc.</p>
+          <li class="noun-definition-one">
+            <p></p>
           </li>
-          <li>
-            <p>A component of many instruments including the piano, organ, and harpsichord consisting of usually black and white keys that cause different tones to be produced when struck.</p>
+          <li class="noun-definition-two">
+            <p></p>
           </li>
-          <li>
-            <p>A device with keys of a musical keyboard, used to control electronic sound-producing devices which may be built into or separate from the keyboard device.</p>
+          <li class="noun-definition-three">
+            <p></p>
           </li>
         </ul>
       </div>
       <div class="synonyms-container">
         <h2>Synonyms</h2>
-        <span>electronic keyboard</span>
+        <span></span>
       </div>
       <div class="definition-container">
-        <div class="adj-noun-verb">
+        <div class="verb adj-noun-verb">
           <h2>verb</h2>
         </div>
         <h2 class="meaning">Meaning</h2>
         <ul>
-          <li>
+          <li class="verb-definition-one">
+            <p>To type on a computer keyboard.</p>
+            <span class="verb-definition-example-one">“Keyboarding is the part of this job I hate the most.”</span>
+          </li>
+        </ul>
+      </div>
+      <div class="definition-container">
+        <div class="adjective adj-noun-verb">
+          <h2>adjective</h2>
+        </div>
+        <h2 class="meaning">Meaning</h2>
+        <ul>
+          <li class="adjective-definition-one">
             <p>To type on a computer keyboard.</p>
             <span>“Keyboarding is the part of this job I hate the most.”</span>
           </li>
