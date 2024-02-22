@@ -1,0 +1,119 @@
+/* Tablet */
+@media only screen and (max-width: 1024px) {
+  .container {
+    padding-inline: 20px;
+    margin: 30px auto 80px auto;
+  }
+
+  .word-display h1 {
+    font-size: 44px;
+  }
+
+  .phoenetic span {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+
+  .adj-noun-verb h2 {
+    margin-right: 15px;
+    font-size: 20px;
+  }
+
+  .meaning {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .definition-container ul {
+    margin-bottom: 30px;
+    padding-left: 28px;
+  }
+
+  .definition-container ul li::marker {
+    color: var(--purple);
+  }
+
+  .definition-container ul p,
+  .definition-container ul span {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .synonyms-container h2 {
+    margin-right: 15px;
+    font-size: 18px;
+  }
+
+  .synonyms-container span {
+    font-size: 16px;
+  }
+
+  .source-container {
+    padding-top: 15px;
+  }
+
+  .source-container span,
+  .source-container a {
+    font-size: 14px;
+  }
+}
+
+/* Mobile */
+@media only screen and (max-width: 600px) {
+  .container {
+    margin: 20px auto 60px auto;
+  }
+
+  .word-display h1 {
+    font-size: 36px;
+  }
+
+  .word-display button svg {
+    width: 45px;
+    height: 45px;
+  }
+
+  .phoenetic span {
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+
+  .adj-noun-verb h2 {
+    margin-right: 10px;
+    font-size: 18px;
+  }
+
+  .meaning {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  .definition-container ul {
+    margin-bottom: 20px;
+    padding-left: 24px;
+  }
+
+  .definition-container ul p,
+  .definition-container ul span {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .synonyms-container h2 {
+    margin-right: 10px;
+    font-size: 16px;
+  }
+
+  .synonyms-container span {
+    font-size: 14px;
+  }
+
+  .source-container {
+    padding-top: 10px;
+  }
+
+  .source-container span,
+  .source-container a {
+    font-size: 12px;
+  }
+}
