@@ -11,12 +11,12 @@
   <div class="container">
     <header>
       <div class="settings-header">
-        <a href="/#">
+        <a href="#">
           <svg width="32" height="36" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 56C0 25.1 25.1 0 56 0H408c22.1 0 40 17.9 40 40V376c0 19.4-13.7 35.5-32 39.2V496h24c4.4 0 8 3.6 8 8s-3.6 8-8 8H56c-30.9 0-56-25.1-56-56V56zM56 416c-22.1 0-40 17.9-40 40s17.9 40 40 40H400V416H56zm-40 .8C26.2 406.4 40.3 400 56 400h56V16H56C33.9 16 16 33.9 16 56V416.8zM128 16V400H408c13.3 0 24-10.7 24-24V40c0-13.3-10.7-24-24-24H128zm48 120c0-4.4 3.6-8 8-8H376c4.4 0 8 3.6 8 8s-3.6 8-8 8H184c-4.4 0-8-3.6-8-8zm0 80c0-4.4 3.6-8 8-8H376c4.4 0 8 3.6 8 8s-3.6 8-8 8H184c-4.4 0-8-3.6-8-8z"/></svg>
         </a>
         <div class="font-and-dark-mode-container">
           <!-- <label for="font-select sr-only">Select Font</label> -->
-          <select name="" id="font-select">
+          <select name="font-select" id="font-select">
             <option value="sans-serif">Sans Serif</option>
             <option value="serif">Serif</option>
             <option value="mono">Mono</option>
@@ -39,63 +39,15 @@
       </div>
     </header>
     <main>
-      <div class="word-display">
-        <h1></h1>
-        <button><svg width="75" height="75" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM384 256L176 384V128L384 256z"/></svg></button>
-      </div>
-      <div class="phoenetic">
-        <span></span>
-      </div>
-      <div class="definition-container">
-        <div class="noun adj-noun-verb">
-          <h2>noun</h2>
-        </div>
-        <h2 class="meaning">Meaning</h2>
-        <ul>
-          <li class="noun-definition-one">
-            <p></p>
-          </li>
-          <li class="noun-definition-two">
-            <p></p>
-          </li>
-          <li class="noun-definition-three">
-            <p></p>
-          </li>
-        </ul>
-      </div>
-      <div class="synonyms-container">
-        <h2>Synonyms</h2>
-        <span></span>
-      </div>
-      <div class="definition-container">
-        <div class="verb adj-noun-verb">
-          <h2>verb</h2>
-        </div>
-        <h2 class="meaning">Meaning</h2>
-        <ul>
-          <li class="verb-definition-one">
-            <p>To type on a computer keyboard.</p>
-            <span class="verb-definition-example-one">“Keyboarding is the part of this job I hate the most.”</span>
-          </li>
-        </ul>
-      </div>
-      <div class="definition-container">
-        <div class="adjective adj-noun-verb">
-          <h2>adjective</h2>
-        </div>
-        <h2 class="meaning">Meaning</h2>
-        <ul>
-          <li class="adjective-definition-one">
-            <p>To type on a computer keyboard.</p>
-            <span>“Keyboarding is the part of this job I hate the most.”</span>
-          </li>
-        </ul>
-      </div>
-      <div class="source-container">
-        <span>Source</span>
-        <a href="https://en.wiktionary.org/wiki/keyboard">https://en.wiktionary.org/wiki/keyboard</a>
-        <svg width="12" height="12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M304 24c0 13.3 10.7 24 24 24H430.1L207 271c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l223-223V184c0 13.3 10.7 24 24 24s24-10.7 24-24V24c0-13.3-10.7-24-24-24H328c-13.3 0-24 10.7-24 24zM72 32C32.2 32 0 64.2 0 104V440c0 39.8 32.2 72 72 72H408c39.8 0 72-32.2 72-72V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V440c0 13.3-10.7 24-24 24H72c-13.3 0-24-10.7-24-24V104c0-13.3 10.7-24 24-24H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H72z"/></svg>
-      </div>
+      <section class="default-container">
+        <span>😄</span>
+        <p>Please enter in a word you wish to have defined into the search box above.</p>
+      </section>
+      <section class="no-results-found-container hide">
+        <span>🥲</span>
+        <p class="not-found">No Definitions Found</p>
+        <p>Sorry pal, we couldn't find definitions for the word you were looking for. You can try the search again at later time or head to the web instead.</p>
+      </section>
     </main>
   </div>
 </body>

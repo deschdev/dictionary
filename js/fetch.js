@@ -1,10 +1,11 @@
-import {key} from "./key.js";
 import {
   headerOneDisplay,
   wordSound,
   pheonetic,
   nouns,
-  synonyms
+  synonyms,
+  verb,
+  source,
 } from "./data-fill.js"
 
 const form = document.querySelector("#search");
@@ -13,15 +14,16 @@ export const dictionaryFetch = () => {
   if (form) {
     form.addEventListener("submit", event => {
       event.preventDefault();
+      clearMain();
       urlFetch();
-    })
+    });
   }
 }
 
 async function urlFetch() {
   try {
     const searchWord = document.querySelector("#search-word").value;
-    const URL = `https://www.dictionaryapi.com/api/v3/references/collegiate/json/${searchWord}?key=${key}`;
+    const URL = `https://api.dictionaryapi.dev/api/v2/entries/en/${searchWord}`;
     const response = await fetch(URL, {
       method: "GET",
     });
@@ -33,7 +35,15 @@ async function urlFetch() {
     pheonetic(data);
     nouns(data);
     synonyms(data);
+    verb(data);
+    source(data);
   } catch (error) {
     console.error(`There has been an error ${error}`)
   }
+}
+
+// clearing the main container when the user submits the form
+const clearMain = () => {
+  const main = document.querySelector("main");
+  main.innerHTML = '';
 }
