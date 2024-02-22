@@ -8,14 +8,27 @@ import {
   source,
 } from "./data-fill.js"
 
+const main = document.querySelector("main");
 const form = document.querySelector("#search");
+const searchWord = document.querySelector("#search-word");
 
 export const dictionaryFetch = () => {
   if (form) {
     form.addEventListener("submit", event => {
       event.preventDefault();
-      clearMain();
-      urlFetch();
+      if (searchWord.value === "" ) {
+        const cannotBeEmptyContainer = document.createElement("section");
+        cannotBeEmptyContainer.className = "cannot-be-empty-container";
+        cannotBeEmptyContainer.innerHTML = `
+          <span>😖</span>
+          <p>Whoops, can't be empty</p>
+        `;
+        main.innerHTML = '';
+        main.appendChild(cannotBeEmptyContainer);
+      } else {
+        clearMain();
+        urlFetch();
+      }
     });
   }
 }

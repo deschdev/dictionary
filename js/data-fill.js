@@ -2,7 +2,16 @@ const main = document.querySelector("main");
 
 // word header
 export const headerOneDisplay = (data) => {
-  if (data[0]?.word) {
+  if (!data[0]?.word) {
+    const notFoundContainer = document.createElement("section");
+    notFoundContainer.className = "no-results-found-container";
+    notFoundContainer.innerHTML = `
+      <span>🥲</span>
+      <p class="not-found">No Definitions Found</p>
+      <p>Sorry pal, we couldn't find definitions for the word you were looking for. You can try the search again at later time or head to the web instead.</p>
+    `;
+    main.appendChild(notFoundContainer);
+  } else {
     const wordDisplayContainer = document.createElement("div");
     wordDisplayContainer.className = "word-display";  
     wordDisplayContainer.innerHTML = `
@@ -44,7 +53,7 @@ export const wordSound = (data) => {
 
 // pheonetic spelling
 export const pheonetic = (data) => {
-  if (data[0]?.pheonetic) {
+  if (data[0]?.pheonetic !== "") {
     const pheoneticContainer = document.createElement("div");
     pheoneticContainer.className = "phoenetic";
     pheoneticContainer.innerHTML = `
@@ -131,7 +140,7 @@ export const source = (data) => {
     sourceContainer.innerHTML = `
       <span>Source</span>
       <a href="${data[0]?.sourceUrls[0]}" target="_blank">${data[0]?.sourceUrls[0]}</a>
-      <svg width="12" height="12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M304 24c0 13.3 10.7 24 24 24H430.1L207 271c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l223-223V184c0 13.3 10.7 24 24 24s24-10.7 24-24V24c0-13.3-10.7-24-24-24H328c-13.3 0-24 10.7-24 24zM72 32C32.2 32 0 64.2 0 104V440c0 39.8 32.2 72 72 72H408c39.8 0 72-32.2 72-72V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V440c0 13.3-10.7 24-24 24H72c-13.3 0-24-10.7-24-24V104c0-13.3 10.7-24 24-24H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H72z"/></svg>
+      <svg width="12" height="12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#757575" d="M304 24c0 13.3 10.7 24 24 24H430.1L207 271c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l223-223V184c0 13.3 10.7 24 24 24s24-10.7 24-24V24c0-13.3-10.7-24-24-24H328c-13.3 0-24 10.7-24 24zM72 32C32.2 32 0 64.2 0 104V440c0 39.8 32.2 72 72 72H408c39.8 0 72-32.2 72-72V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V440c0 13.3-10.7 24-24 24H72c-13.3 0-24-10.7-24-24V104c0-13.3 10.7-24 24-24H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H72z"/></svg>
     `;
     main.appendChild(sourceContainer);
   } 

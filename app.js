@@ -1,8 +1,9 @@
 import { dictionaryFetch } from "./js/fetch.js";
-import { initFontFamilyChange, fontFamilyChange } from "./js/font-change.js"
+import { initFontFamilyChange } from "./js/font-change.js"
+import { darkOrLight } from "./js/light-or-dark.js";
 
 const init = () => {
-  fontFamilyChange();
+  darkOrLight();
   initFontFamilyChange();
   dictionaryFetch();
 }
