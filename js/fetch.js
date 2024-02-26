@@ -41,7 +41,6 @@ async function urlFetch() {
       method: "GET",
     });
     const data = await response.json();
-    console.log(data);
     
     headerOneDisplay(data);
     wordSound(data);
