@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore a comprehensive dictionary app that provides definitions, synonyms, antonyms, and examples for thousands of words. Enhance your vocabulary and language skills with our user-friendly interface and extensive word database. Download now and experience the ultimate tool for language enthusiasts.">
   <link rel="stylesheet" href="./css/styles.css">
   <link rel="stylesheet" href="./css/media-queries.css">
   <script defer src="./app.js" type="module"></script>
@@ -12,17 +13,17 @@
   <div class="container">
     <header>
       <div class="settings-header">
-        <a href="#">
+        <a href="#" aria-label="home">
           <svg width="32" height="36" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 56C0 25.1 25.1 0 56 0H408c22.1 0 40 17.9 40 40V376c0 19.4-13.7 35.5-32 39.2V496h24c4.4 0 8 3.6 8 8s-3.6 8-8 8H56c-30.9 0-56-25.1-56-56V56zM56 416c-22.1 0-40 17.9-40 40s17.9 40 40 40H400V416H56zm-40 .8C26.2 406.4 40.3 400 56 400h56V16H56C33.9 16 16 33.9 16 56V416.8zM128 16V400H408c13.3 0 24-10.7 24-24V40c0-13.3-10.7-24-24-24H128zm48 120c0-4.4 3.6-8 8-8H376c4.4 0 8 3.6 8 8s-3.6 8-8 8H184c-4.4 0-8-3.6-8-8zm0 80c0-4.4 3.6-8 8-8H376c4.4 0 8 3.6 8 8s-3.6 8-8 8H184c-4.4 0-8-3.6-8-8z"/></svg>
         </a>
         <div class="font-and-dark-mode-container">
-          <!-- <label for="font-select sr-only">Select Font</label> -->
+          <label for="font-select" class="sr-only">Select Font</label>
           <select name="font-select" id="font-select">
             <option value="sans-serif">Sans Serif</option>
             <option value="serif">Serif</option>
             <option value="mono">Mono</option>
           </select>
-          <label class="toggle" for="dark-or-light" name="dark-or-light">
+          <label class="toggle" for="dark-or-light" name="dark-or-light" aria-label="dark-mode">
             <input type="checkbox" id="dark-or-light" value="dark-or-light">
             <span class="slider round"></span>
           </label>
@@ -33,7 +34,7 @@
       <search class="search-container">
         <form id="search">
           <input type="text" id="search-word" placeholder="Search for any word...">
-          <button type="submit">
+          <button type="submit" aria-label="Search">
             <svg width="15.5" height="15.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M368 208A160 160 0 1 0 48 208a160 160 0 1 0 320 0zM337.1 371.1C301.7 399.2 256.8 416 208 416C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208c0 48.8-16.8 93.7-44.9 129.1l124 124 17 17L478.1 512l-17-17-124-124z"/></svg>
           </button>
         </form>

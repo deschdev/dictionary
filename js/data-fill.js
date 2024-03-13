@@ -66,22 +66,20 @@ export const pheonetic = (data) => {
 // nouns
 export const nouns = (data) => {
   if (data[0]?.meanings[0]?.definitions.length) {
-    const nounsContainer = document.createElement("div");
+    const nounsContainer = document.createElement("dl");
     nounsContainer.className = "definition-container noun";
 
     const definitionsHTML = data[0]?.meanings[0]?.definitions.map((definition, index) => {
       return `
         <li class="noun-definition">
-          <p>${definition.definition}</p>
+          <dd>${definition.definition}</dd>
         </li>
       `;
       }).join("");
 
     nounsContainer.innerHTML = `
-      <div class="adj-noun-verb">
-        <h2>noun</h2>
-      </div>
-      <h2 class="meaning">Meaning</h2>
+      <dt adj-noun-verb>noun</dt>
+      <h3 class="meaning">Meaning</h3>
       <ul>
         ${definitionsHTML}
       </ul>
@@ -113,16 +111,14 @@ export const verb = (data) => {
     const definitionsHTML = data[0]?.meanings[1]?.definitions.map((definition, index) => {
       return `
         <li class="verb-definition-${index + 1}">
-          <p>${definition.definition}</p>
+          <dd>${definition.definition}</dd>
         </li>
       `;
     }).join("");
 
     verbContainer.innerHTML = `
-      <div class="adj-noun-verb">
-        <h2>verb</h2>
-      </div>
-      <h2 class="meaning">Meaning</h2>
+      <dt class="adj-noun-verb">verb</dt>
+      <h3 class="meaning">Meaning</h3>
       <ul>
         ${definitionsHTML}
       </ul>
@@ -132,7 +128,7 @@ export const verb = (data) => {
   }
 }
 
-// source
+// source url
 export const source = (data) => {
   if (data[0]?.sourceUrls && data[0]?.sourceUrls.length) {
     const sourceContainer = document.createElement("div");
